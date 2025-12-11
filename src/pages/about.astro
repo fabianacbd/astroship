@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
+import cap1 from "@/assets/image0.png";
+import cap2 from "@/assets/image1.png";
 import Layout from "@/layouts/Layout.astro";
 import Container from "@/components/container.astro";
 import Sectionhead from "@/components/sectionhead.astro";
@@ -14,44 +16,23 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="title">Como subir una historia en Instagram</Fragment>
+      <Fragment slot="desc">Aqui encontraras el paso a paso para subir tu primera historia para que puedas compartirla con todos tus amigos.</Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
-      </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
-      </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
-                sizes="(max-width: 800px) 100vw, 400px"
-                width={400}
-                height={400}
-                class="w-full rounded-sm transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-              />
-            </div>
+               <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+               <p className="text-center md:text-left"><b>Paso 1</b> - Buscar el simbolo de + y dale click.</p>
+               <img src="src/assets/image6.png" className="w-48 h-auto rounded-lg" alt="Paso 1" />
 
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
-            </div>
-          </div>
-        ))
-      }
     </div>
+<div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+                    <p className="text-center md:text-left"><b>Paso 2</b> - Puedes escoger una foto de tu galeria o tomar una fotografia nueva en el momento con tu camara.</p>
+                    <img src="src/assets/IMG_0758.PNG" class="w-200px h-auto mt-4 rounded-lg">
+
+      </div>
+      <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+                    <p className="text-center md:text-left"><b>Paso 3</b> - Escoge la foto que quieras subir de tu galeria o toma una foto y decide si subirla a tus mejores amigos o a todos tus amigos en general. Cuando estes listo hacer click en Compartir.</p>
+                    <img src="src/assets/IMG_0761.PNG" class="w-200px h-auto mt-4 rounded-lg">
+
   </Container>
 </Layout>

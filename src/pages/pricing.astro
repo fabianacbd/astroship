@@ -6,60 +6,41 @@ import PricingCard from "@/components/pricing.astro";
 
 const pricing = [
   {
-    name: "Personal",
-    price: "Free",
+    name: "Paso 1",
+    price: "Registro",
     popular: false,
     features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
+      "Ingresa tu email o telefono",
+      "Ingresa una contraseña",
+      "Ingresa tu nombre completo",
+      "Ingresa tu nombre de usuario, debe ser unico y puedes cambiarlo luego",
+      "Puedes crear tu cuenta usando Facebook tambien"
     ],
-    button: {
-      text: "Get Started",
-      link: "/",
-    },
+    image: "src/assets/img.png"
   },
   {
-    name: "Startup",
-    price: {
-      monthly: "$19",
-      annual: "$16",
-      discount: "10%",
-      original: "$24",
+    name: "Paso 2",
+    price:
+    {
+      monthly: "Agregar tu fecha de nacimiento",
     },
     popular: true,
     features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
+      "Ingresa tu fecha de nacimiento",
+      "Click en el boton siguiente",
     ],
-    button: {
-      text: "Get Started",
-      link: "#",
-    },
+    image: "src/assets/img_1.png"
   },
   {
-    name: "Enterprise",
-    price: "Custom",
+    name: "Paso 3",
+    price: "Ingresar codigo de confirmacion",
     popular: false,
     features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
+      "Ingresa a tu email o a tu bandeja de SMS depende de lo que hayas escogido",
+      "Coloca el codigo de confirmacion que te han enviado",
+      "Click en Siguiente",
     ],
-    button: {
-      text: "Contact us",
-      link: "/contact",
-    },
+    image: "src/assets/img_2.png"
   },
 ];
 ---
@@ -67,9 +48,9 @@ const pricing = [
 <Layout title="Pricing">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Pricing</Fragment>
+      <Fragment slot="title">Pasos para registrarte en Instagram</Fragment>
       <Fragment slot="desc">
-        Simple & Predictable pricing. No Surprises.
+        Aprende a registrarte en instragram en menos de 5 minutos.
       </Fragment>
     </Sectionhead>
 

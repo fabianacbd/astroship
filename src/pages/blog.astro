@@ -19,55 +19,48 @@ publishedBlogEntries.sort(function (a, b) {
 <Layout title="Blog">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Our Blog</Fragment>
+      <Fragment slot="title">Como seguir amigos en Instagram</Fragment>
       <Fragment slot="desc">
-        We write about building startups and thoughts going on our mind.
+        Paso a paso para seguir a tus amigos y contactos en Instagram
       </Fragment>
     </Sectionhead>
     <main class="mt-16">
-      <ul class="grid gap-16 max-w-4xl mx-auto">
-        {
-          publishedBlogEntries.map((blogPostEntry, index) => (
-            <li>
-              <a href={`/blog/${blogPostEntry.slug}`}>
-                <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
-                  <Picture
-                    src={blogPostEntry.data.image.src}
-                    alt={blogPostEntry.data.image.alt}
+                <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+                <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
+                Busca a tus amigos</h2>
+                <Picture
+                    src="/src/assets/img_3.png"
+                    alt=""
                     sizes="(max-width: 800px) 100vw, 800px"
                     width={800}
                     height={600}
-                    loading={index <= 2 ? "eager" : "lazy"}
-                    decoding={index <= 2 ? "sync" : "async"}
-                    class="w-full rounded-md object-cover object-center bg-white"
-                  />
-                  <div>
-                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-                      {blogPostEntry.data.category}
-                    </span>
-
-                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
-                      {blogPostEntry.data.title}
-                    </h2>
-
-                    <div class="flex gap-2 mt-3">
-                      <span class="text-gray-400">
-                        {blogPostEntry.data.author}
-                      </span>
-                      <span class="text-gray-400">• </span>
-                      <time
-                        class="text-gray-400"
-                        datetime={blogPostEntry.data.publishDate.toISOString()}>
-                        {blogPostEntry.data.publishDate.toDateString()}
-                      </time>
-                    </div>
+                    class="w-full rounded-md object-cover object-center bg-white"/>
+                    <span class="text-gray-400">Encuentra la lupa en la parte de abajo de la app y dale click para buscar.</span>
                   </div>
-                </div>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+                            <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+                            <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
+                            Escribe el nombre o username de tu amigo</h2>
+                            <Picture
+                                src="/src/assets/image7.png"
+                                alt=""
+                                sizes="(max-width: 800px) 100vw, 800px"
+                                width={800}
+                                height={600}
+                                class="w-full rounded-md object-cover object-center bg-white"/>
+                                <span class="text-gray-400">Una vez hayas dado click a la lupa, preguntale a tu amigo su username o escribe su nombre y apellido para encontrarlo. Cuando hagas click en buscar debes darle a la parte de "Cuentas"</span>
+                              </div>
+                                                    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+                                                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
+                                                    Seguir a tu amigo</h2>
+                                                    <Picture
+                                                        src="/src/assets/image8.png"
+                                                        alt=""
+                                                        sizes="(max-width: 800px) 100vw, 800px"
+                                                        width={800}
+                                                        height={600}
+                                                        class="w-full rounded-md object-cover object-center bg-white"/>
+                                                        <span class="text-gray-400">Cuando hayas encontrado a tu amigo, haz click en el boton de "Seguir" y ya estaria si su usuario es publico. Si su usuario es privado, se le enviara una solicitud de amistad que debe aceptar o rechazar.</span>
+                                                      </div>
     </main>
   </Container>
 </Layout>
