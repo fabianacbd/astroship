@@ -1,8 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { Picture } from "astro:assets";
-import cap1 from "@/assets/image0.png";
-import cap2 from "@/assets/image1.png";
+import { Picture } from "astro:images";
 import Layout from "@/layouts/Layout.astro";
 import Container from "@/components/container.astro";
 import Sectionhead from "@/components/sectionhead.astro";
@@ -18,21 +16,30 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
     <Sectionhead>
       <Fragment slot="title">Como subir una historia en Instagram</Fragment>
       <Fragment slot="desc">Aqui encontraras el paso a paso para subir tu primera historia para que puedas compartirla con todos tus amigos.</Fragment>
-    </Sectionhead>
-
-               <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
-               <p className="text-center md:text-left"><b>Paso 1</b> - Buscar el simbolo de + y dale click.</p>
-               <img src="./src/assets/image6.png" className="w-48 h-auto rounded-lg" alt="Paso 1" />
-
-    </div>
+    </Sectionhead><div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+               <p className="text-center md:text-left"><b>Paso 1</b> - Buscar el simbolo de + y dale click para generar una nueva historia.</p>
+               <img src="/images/image1 (3).png" className="w-48 h-auto rounded-lg" alt="Paso 1" /></div>
 <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
-                    <p className="text-center md:text-left"><b>Paso 2</b> - Puedes escoger una foto de tu galeria o tomar una fotografia nueva en el momento con tu camara.</p>
-                    <img src="./src/assets/IMG_0758.PNG" class="w-200px h-auto mt-4 rounded-lg">
-
-      </div>
-      <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
-                    <p className="text-center md:text-left"><b>Paso 3</b> - Escoge la foto que quieras subir de tu galeria o toma una foto y decide si subirla a tus mejores amigos o a todos tus amigos en general. Cuando estes listo hacer click en Compartir.</p>
-                    <img src="./src/assets/IMG_0761.PNG" class="w-200px h-auto mt-4 rounded-lg">
+<p className="text-center md:text-left"><b>Paso 2</b> - Puedes escoger una foto de tu galeria o tomar una fotografia nueva en el momento con tu camara. Para capturar una foto nueva solo debes darle al boton blanco de abajo en el centro.</p>
+<img src="/images/IMG_0758.PNG" class="w-200px h-auto mt-4 rounded-lg"></div>
+<div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+<p className="text-center md:text-left"><b>Paso 3</b> - Puedes personalizar tu foto de diversas maneras. Instagram te da la opcion de: Dibujar, agregar texto, efectos, musica, stickers, puedes descargar y mas cosas.  </p>
+<img src="/images/image0 (1).png" class="w-200px h-auto mt-4 rounded-lg"></div>
+<div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+<p className="text-center md:text-left"><b>Stickers</b> - Si das click en Stickers te mostrara Instagram todas las opciones de detalles que puedes agregar a tu historia como: La ubicacion, el clima, la temperatura, emoticonos tematicos, la hora, etc. Puedes escoger mas de una pero debes escoger una por una, solo debes hacerle click y a la que quieras.  </p>
+<img src="/images/image36.png" class="w-200px h-auto mt-4 rounded-lg"></div>
+<div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+<p className="text-center md:text-left"><b>Escribir texto</b> - Puedes escoger escribir sobre tu imagen colocando cualquier cosa que pienses o quieras, puedes modificar el texto, la letra y el color a tu gusto y moverlo al sitio que se ajuste mejor.</p>
+<img src="/images/image4 (1).png" class="w-200px h-auto mt-4 rounded-lg"></div>
+<div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+<p className="text-center md:text-left"><b>Dibujar</b> - Tambien puedes dibujar del grosor que quieras, lo que quieras y en el color de quieras encima de tu foto.</p>
+<img src="/images/image5.png" class="w-200px h-auto mt-4 rounded-lg"></div>
+<div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+<p className="text-center md:text-left"><b>Agregar musica</b> - Puedes escoger ponerle audio/musica a tu historia, dale click a la nota musical que se abrira un navegador que te recomendara canciones en tendencia o que puedes buscar el nombre de la cancion que quieras.</p>
+<img src="/images/image2 (1).png" class="w-200px h-auto mt-4 rounded-lg"></div>
+<div class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+<p className="text-center md:text-left"><b>Paso 4</b> - Cuando ya tengas tu historia completamente personalizada a tu gusto, puedes escoger si compartirlo con tu lista de mejores amigos (si tienes), enviarsela a una persona en especifico o varias y al final, con el publico general (tus seguidores). Hacer click en Compartir y ya habrias compartido tu primera historia.</p>
+<img src="/images/IMG_0761.PNG" class="w-200px h-auto mt-4 rounded-lg"></div>
 
   </Container>
 </Layout>
